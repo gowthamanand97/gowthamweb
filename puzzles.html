@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+button
+{
+background-color:green;
+color:white;
+padding:20px;
+position:relative;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#f1").click(function(){
+        $("#f2").toggle(1000);
+        $("#f4").toggle(1000);
+    });
+    $("#f2").click(function(){
+        $("#f1").toggle(1000);
+        $("#f3").toggle(1000);
+        $("#f5").toggle(1000);
+    });
+    $("#f3").click(function(){
+        $("#f2").toggle(1000);
+        $("#f6").toggle(1000);
+    });
+    $("#f4").click(function(){
+        $("#f1").toggle(1000);
+        $("#f5").toggle(1000);
+        $("#f7").toggle(1000);
+    });
+    $("#f5").click(function(){
+        $("#f2").toggle(1000);
+        $("#f4").toggle(1000);
+        $("#f6").toggle(1000);
+        $("#f8").toggle(1000);
+    });
+    $("#f6").click(function(){
+        $("#f5").toggle(1000);
+        $("#f3").toggle(1000);
+        $("#f9").toggle(1000);
+    });
+    $("#f7").click(function(){
+        $("#f4").toggle(1000);
+        $("#f8").toggle(1000);
+    });
+    $("#f8").click(function(){
+        $("#f7").toggle(1000);
+        $("#f9").toggle(1000);
+        $("#f5").toggle(1000);
+    });
+    $("#f9").click(function(){
+        $("#f8").toggle(1000);
+        $("#f6").toggle(1000);
+       
+    });
+});
+</script>
+</head>
+<body>
+
+<h4><p><center>If you click on me, I will disappear.</center></p></h4>
+<center>
+<table>
+<tr>
+<td><button id="f1">1</button></td>
+<td><button id="f2">2</button></td>
+<td><button id="f3">3</button></td></tr>
+<tr>
+<td><button id="f4">4</button></td>
+<td><button id="f5">5</button></td>
+<td><button id="f6">6</button></td></tr>
+<tr>
+<td><button id="f7">7</button></td>
+<td><button id="f8">8</button></td>
+<td><button id="f9">9</button></td></tr>
+</table>
+</center>
+</body>
+</html>
